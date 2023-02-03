@@ -1,0 +1,157 @@
+/*general*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.65em;
+  text-decoration: color #393d41;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: rgb(0, 153, 255);
+  font-style: bold;
+  line-height: 1.5em;
+  margin-bottom: 0em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*header*/
+
+header {
+  background-color: black;
+  width: 100%;
+}
+
+header>img {
+  width: 175px;
+  margin: 10%;
+}
+
+/*main*/
+
+main {
+  width: 100%;
+}
+
+.div1 {
+  padding: 5%;
+  font-size: 1.3em;
+  height: 400px;
+  background-image: url(../images/banner.jpg);
+  background-position: center;
+  background-size: contain;
+}
+
+.div1>h1 {
+  font-size: 2em;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: #f04c2f;
+  border-radius: 5px;
+  width: 10em;
+  height: 2.5em;
+  font-size: 1em;
+  margin-top: 1em;
+  border: none;
+}
+
+.adds {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-right: 2.5vw;
+  margin-bottom: 0.5em;
+  margin-left: 2.5vw;
+}
+
+.circle>img {
+  border-radius: 250px;
+  width: 300px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.divOrange {
+  color: white;
+  background-color: #f04c2f;
+  padding-top: 1em;
+  padding-right: 2.5vw;
+  padding-bottom: 1em;
+  padding-left: 2.5vw;
+}
+
+.divOrange>h1 {
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  font-size: 0.6em;
+}
+
+#italic {
+  text-decoration: italic;
+}
+
+.divFooter {
+  margin-top: 1em;
+  font-size: 0.7em;
+  line-height: normal;
+}
+
+.divBorder {
+  width: 90vw;
+  margin: 0px auto;
+  margin-bottom: 1em;
+  border: solid 1px #dee1e3
+}
+
+.img {
+  height: 240px;
+  width: 400px;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  color: white;
+  background-color: #25a2c3;
+}
+
+footer>h2 {
+  color: white;
+  margin-bottom: 1em;
+}
+
+footer>div>p {
+  margin: 0px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer hr {
+  width: 50%;
+  border: 1px solid white;
+}
