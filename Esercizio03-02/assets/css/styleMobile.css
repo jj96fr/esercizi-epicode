@@ -1,6 +1,8 @@
 /*general*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
+
   font-family: 'Open Sans', sans-serif;
   line-height: 1.65em;
   text-decoration: color #393d41;
@@ -11,7 +13,7 @@ body {
 h1,
 h2 {
   color: rgb(0, 153, 255);
-  font-style: bold;
+  font-weight: bold;
   line-height: 1.5em;
   margin-bottom: 0em;
 }
