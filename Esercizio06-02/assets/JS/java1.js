@@ -1,0 +1,8 @@
+window.alert('Questo è un alert!')
+window.alert('Questo è un alert!2')
+document.write('<h1>Iniziamo la nostra pratica</h1>')
+document.write('<p>output scritto da Javascript<p>')
+document.write('<p>pantera scritto da Javascript<p>')
+console.log("criceto()")
+console.log("giraffa()")
+console.log("leone()")
