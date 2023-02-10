@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Calcolatrice</title>
+</head>
+
+<body>
+    <div class="container">
+        <div><input id="C" type="button" onclick="clearAll()" value="C" /> <span id="answer">0</span></div>
+        <br><br>
+        <div class="row justify-content-evenly justify-content-center">
+            <input type="button" onclick="numericButton('1')" value="1" />
+            <input type="button" onclick="numericButton('2')" value="2" />
+            <input type="button" onclick="numericButton('3')" value="3" />
+            <input type="button" onclick="operatorButton('*')" value="x" />
+        </div>
+        <br>
+        <div class="row justify-content-evenly justify-content-center">
+            <input type="button" onclick="numericButton('4')" value="4" />
+            <input type="button" onclick="numericButton('5')" value="5" />
+            <input type="button" onclick="numericButton('6')" value="6" />
+            <input type="button" onclick="operatorButton('-')" value="-" />
+        </div>
+        <br>
+        <div class="row justify-content-evenly justify-content-center">
+            <input type="button" onclick="numericButton('7')" value="7" />
+            <input type="button" onclick="numericButton('8')" value="8" />
+            <input type="button" onclick="numericButton('9')" value="9" />
+            <input type="button" onclick="operatorButton('+')" value="+" />
+        </div>
+        <br>
+        <div class="row justify-content-evenly justify-content-center">
+            <input type="button" onclick="numericButton('0')" value="0" />
+            <input type="button" onclick="numericButton('.')" value="." />
+            <input id="equals" type="button" onclick="calculateQueue(queue)" value="=" />
+            <input type="button" onclick="operatorButton('/')" value="÷" />
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/script.js"></script>
+
+</html>

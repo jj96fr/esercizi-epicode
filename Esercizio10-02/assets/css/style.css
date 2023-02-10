@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+* {
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 220, 252, 1) 100%);
+    ;
+    width: 450px;
+    height: 600px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+
+input[type='button'] {
+    
+    background: radial-gradient(circle, rgba(212, 245, 171, 1) 0%, rgba(163, 180, 137, 1) 100%);
+
+    border-radius: 20px;
+    border-width: 3px;
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    margin: 10px;
+}
+
+
+
+#answer {
+    font-size: 30px;
+    margin-right: 10px;
+}
