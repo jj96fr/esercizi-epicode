@@ -1,0 +1,7 @@
+.myHeading {
+    color: red;
+  }
+
+#footer.cambiato {
+    content: "Il testo del footer è stato cambiato!";
+}
