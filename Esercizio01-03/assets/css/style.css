@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+h1 {
+  color: rgb(115, 33, 4);
+  padding-left: 20px;
+}
+
+/* NAV */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  background-color: rgb(255, 247, 226);
+  color: rgb(115, 33, 4);
+  font-weight: bold;
+  border-radius: 10vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+@media screen and (max-width: 500px) {
+  nav ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
+  nav li.shop {
+    width: 90%;
+    order: -1;
+  }
+}
+
+nav li {
+  cursor: pointer;
+  background-color: rgb(255, 223, 127);
+  padding: 18px;
+  border-radius: 45px;
+}
+
+nav li.shop {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: space-around;
+  flex-grow: 0.2;
+}
+
+nav li.shop img {
+  width: 2em;
+}
+
+/* products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* product card */
+.product-card {
+  background-color: rgb(250, 226, 181);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 250px;
+  max-width: 350px;
+  border-radius: 40px;
+  margin: 20px;
+  color: rgb(115, 33, 4);
+}
+
+.product-card img { 
+  height: 80%;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
+.product-card .content {
+  margin: 10px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(115, 33, 4);
+}
+
+.btn-add-cart {
+  background-color: rgb(255, 209, 123);
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  color: rgb(115, 33, 4);
+}
+
+.product-card .content > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*  article */
+article {
+  background-color: rgb(255, 247, 226);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(115, 33, 4);
+}
+
+
+
+@media screen and (min-width: 768px) {
+  article {
+    flex-direction: row;
+  }
+
+  article img {
+    padding-right: 20px;
+    display: flex;
+    width: 50%;
+    order: -1;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .products {
+    display: flex;}
+}
+
+
