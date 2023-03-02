@@ -1,0 +1,75 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+body {
+  height: 100%;
+  margin: 0;
+}
+#testoAlternato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#testoAlternato p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.5;
+  border: 1px black solid;
+  padding: 20px;
+  width: 40vw;
+}
+.parole i {
+  position: absolute;
+  padding-left: 10px;
+  transform: translate(0px, -50vh);
+}
+/* duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+.parole i:nth-of-type(1) {
+  color: blue;
+  animation-name: myanimation;
+  animation-duration: 6s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.parole :nth-child(2) {
+  color: red;
+  animation-name: myanimation;
+  animation-duration: 6s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+.parole :nth-child(3) {
+  color: green;
+  animation-name: myanimation;
+  animation-duration: 6s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes myanimation {
+  0% {
+    transform: translate(0, -50vh);
+    opacity: 0;
+  }
+  40% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, +50vw);
+    opacity: 0;
+  }
+}
