@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap demo</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        .row {
+            /* height: 20vh; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pratica con il grid system</h1>
+    <div>
+        <h2 class="text-center">Esercizio 1:</h2>
+        <p>Breakpoint "md" </p>
+        <div class="row">
+            <div class="col-md p-3 bg-primary border border-dark text-white">colonna 1</div>
+            <div class="col-md p-3 bg-primary border border-dark text-white">colonna 2</div>
+            <div class="col-md p-3 bg-primary border border-dark text-white">colonna 3</div>
+        </div>
+
+        <h2 class="text-center">Esercizio 2:</h2>
+        <p>Su dispositivi mobili e tablet si impilano automaticamente</p>
+        <div class="row">
+            <div class="col-md p-3 bg-warning border border-dark text-dark">colonna 1</div>
+            <div class="col-md p-3 bg-warning border border-dark text-dark">colonna 2</div>
+            <div class="col-md p-3 bg-warning border border-dark text-dark">colonna 3</div>
+        </div>
+
+        <h2 class="text-center">Esercizio 3:</h2>
+        <p>Per tutti i Breakpoint</p>
+        <div class="row">
+            <div class="col p-3 bg-success border border-dark text-white">colonna 1</div>
+            <div class="col p-3 bg-success border border-dark text-white">colonna 2</div>
+            <div class="col p-3 bg-success border border-dark text-white">colonna 3</div>
+        </div>
+
+        <h2 class="text-center">Esercizio 4:</h2>
+        <p>Tre colonne diverse: 2 laterali uguali, dal desktop in su</p>
+        <div class="row text-center ">
+            <div class="col-md-2 p-3 bg-danger border border-dark text-white">colonna laterale</div>
+            <div class="col-md p-3 bg-danger border border-dark text-white">colonna</div>
+            <div class="col-md-2 p-3 bg-danger border border-dark text-white">colonna laterale</div>
+        </div>
+        <h2 class="text-center">Esercizio 5:</h2>
+        <p>Due colonne dal desktop in su, con all'interno della colonna più grande altre due colonne di uguale
+            grandezza.
+            per mobile e tablet si impilano
+        </p>
+        <div class="row text-white">
+            <div class="col-md-2 p-3 bg-info border border-dark ">colonna 1</div>
+            <div class="col-md-10  bg-info border border-dark">
+                <div class="row h-100">
+                    <div class="col-md-6 p-3 bg-dark-subtle ">col1</div>
+                    <div class="col-md-6 p-3 bg-dark-subtle ">col2</div>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center">Esercizio 6:</h2>
+        <p>Due colonne dal desktop in su, la seconda deve spostarsi di due porzioni
+        </p>
+        <div class="row text-white">
+            <div class="col-md-4 p-3 bg-dark border border-dark">colonna 1</div>
+            <div class="col-md-6 p-3 bg-dark border border-dark offset-md-2">colonna 2</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
