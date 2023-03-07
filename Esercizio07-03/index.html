@@ -89,17 +89,36 @@ EXTRAS
 -->
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Agenzia di Viaggi</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <title>Agenzia di viaggi</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    /* Stile per il badge HOT */
+    .hot-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background-color: #FF5733;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-travel-logo.-travel-agency-adventure-creative-sign.-png-image_3628166.jpg" alt="Logo Agenzia di Viaggi" width="100" height="50"></a>
+    <a class="navbar-brand" href="#">
+      <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-travel-logo.-travel-agency-adventure-creative-sign.-png-image_3628166.jpg" alt="Logo Agenzia di Viaggi" width="100" height="50">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -112,7 +131,7 @@ EXTRAS
           <a class="nav-link" href="#saldi-section">Saldi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#welcome-section">Welcome Summer</a>
+          <a class="nav-link" href="#welcome-summer-section">Welcome Summer</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#offerta-section">Offerta del giorno</a>
@@ -126,276 +145,305 @@ EXTRAS
 
   <section id="intro-section" class="intro-section">
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-md-6">
           <h1>Agenzia di Viaggi</h1>
-          <p class="lead">Una breve descrizione in corsivo</p>
-          <a href="#" class="btn btn-primary btn-lg">Prenota ora</a>
+          <p class="font-italic">Il tuo viaggio su misura</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget urna metus. Donec tincidunt metus vel massa bibendum consectetur. Nulla tincidunt velit eu ultrices malesuada. Etiam bibendum leo vel congue vestibulum. Maecenas varius tincidunt nisi vel congue.</p>
+          <button class="btn btn-primary">Prenota ora</button>
         </div>
         <div class="col-md-6">
-          <img src="intro-img.jpg" alt="Destinazione di viaggio" class="img-fluid rounded shadow-lg">
+          <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="img-fluid rounded" alt="Viaggio">
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="saldi-section" class="saldi-section">
-    <div class="container">
-      <h2>Saldi</h2>
-      <div class="row">
-        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-          <div class="destination-card rounded shadow-sm">
-            <img src="destination1.jpg" alt="Destinazione 1" class="img-fluid rounded-top">
-            <div class="card-body">
-              <h5 class="card-title">Destinazione 1</h5>
-              <p class="card-text">Breve descrizione destinazione</p>
-              <a href="#" class="btn btn-primary">Prenota ora</a>
-            </div>
+     
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <hr>
           </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-          <div class="destination-card rounded shadow-sm">
-            <img src="destination2.jpg" alt="Destinazione 2" class="img-fluid rounded-top">
-            <div class="card-body">
-              <h5 class="card-title">Destinazione 2</h5>
-              <p class="card-text">Breve descrizione destinazione</p>
-              <a href="#" class="btn btn-primary">Prenota ora</a>
-            </div>
+          <div class="col-md-6 text-center">
+            <button class="btn btn-secondary" onclick="removeCards()">Rimuovi tutte le destinazioni</button>
           </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-          <div class="destination-card rounded shadow-sm">
-            <img src="destination3.jpg" alt="Destinazione 3" class="img-fluid rounded-top">
-            <div class="card-body">
-              <h5 class="card-title">Destinazione 3</h5>
-              <p class="card-text">Breve descrizione destinazione</p>
-              <a href="#" class="btn btn-primary">Prenota ora</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-          <div class="destination-card rounded shadow-sm">
-            <img src="destination4.jpg" alt="Destinazione 4" class="img-fluid rounded-top">
-            <div class="card-body">
-              <h5 class="card-title">Destinazione 4</h5>
-              <p class="card-text">Breve descrizione destinazione</p>
-              <a href="#" class="btn btn-primary">Prenota ora</a>
-            </div>
+          <div class="col-md-6 text-center">
+            <button class="btn btn-secondary" onclick="addHotBadge()">Aggiungi badge HOT</button>
           </div>
         </div>
       </div>
-      <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#saldi-section" aria-expanded="false" aria-controls="saldi-section">
-        Collassa/Riapri
-      </button>
-    </div></section>
-    <section id="welcome-section" class="welcome-section">
+    </section>
+    <section id="saldi-section" class="saldi-section">
       <div class="container">
-        <h2>Welcome Summer</h2>
+        <h2>Saldi</h2>
         <div class="row">
-          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="destination-card rounded shadow-lg">
-              <img src="destination5.jpg" alt="Destinazione 5" class="img-fluid">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card h-100 destination-card">
+              <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Prenota ora</a>
+                <h5 class="card-title">Destinazione 1</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis neque sit amet lectus gravida, ac euismod velit finibus. Integer maximus odio id tincidunt vehicula. Donec ornare in nunc at consequat. Fusce quis aliquet nisl.</p>
+                <button class="btn btn-primary">Prenota ora</button>
               </div>
             </div>
           </div>
-          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="destination-card rounded shadow-lg">
-              <img src="destination6.jpg" alt="Destinazione 6" class="img-fluid">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card h-100 destination-card">
+              <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Prenota ora</a>
+                <h5 class="card-title">Destinazione 2</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis neque sit amet lectus gravida, ac euismod velit finibus. Integer maximus odio id tincidunt vehicula. Donec ornare in nunc at consequat. Fusce quis aliquet nisl.</p>
+                <button class="btn btn-primary">Prenota ora</button>
               </div>
             </div>
           </div>
-          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="destination-card rounded shadow-lg">
-              <img src="destination7.jpg" alt="Destinazione 7" class="img-fluid">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card h-100 destination-card">
+              <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Prenota ora</a>
+                <h5 class="card-title">Destinazione 3</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis neque sit amet lectus gravida, ac euismod velit finibus. Integer maximus odio id tincidunt vehicula. Donec ornare in nunc at consequat. Fusce quis aliquet nisl.</p>
+                <button class="btn btn-primary">Prenota ora</button>
               </div>
             </div>
           </div>
-          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4">      <div class="destination-card rounded shadow-lg">
-            <img src="destination8.jpg" alt="Destinazione 8" class="img-fluid">
+          <div class="col-lg-3col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card h-100 destination-card">
+            <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
             <div class="card-body">
-              <a href="#" class="btn btn-primary">Prenota ora</a>
+            <h5 class="card-title">Destinazione 4</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis neque sit amet lectus gravida, ac euismod velit finibus. Integer maximus odio id tincidunt vehicula. Donec ornare in nunc at consequat. Fusce quis aliquet nisl.</p>
+            <button class="btn btn-primary">Prenota ora</button>
             </div>
-          </div>
-        </div>
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4">
-          <div class="destination-card rounded shadow-lg">
-            <img src="destination9.jpg" alt="Destinazione 9" class="img-fluid">
-            <div class="card-body">
-              <a href="#" class="btn btn-primary">Prenota ora</a>
             </div>
-          </div>
-        </div>
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4">
-          <div class="destination-card rounded shadow-lg">
-            <img src="destination10.jpg" alt="Destinazione 10" class="img-fluid">
-            <div class="card-body">
-              <a href="#" class="btn btn-primary">Prenota ora</a>
             </div>
-          </div>
-        </div>
-      </div>
-      <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#welcome-section" aria-expanded="false" aria-controls="welcome-section">
-        Collassa/Riapri
-      </button>
-    </div>
-</section>
-<section id="offerta-section" class="offerta-section d-none d-md-block">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="offerta-img.jpg" alt="Offerta del giorno" class="img-fluid rounded shadow-lg">
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Offerta del giorno</h5>
-            <p class="card-text">
-              <span class="lead">Nome destinazione</span><br>
-              <span class="font-monospace">01/07/2023 - 08/07/2023</span><br>
-              <span class="lead">Prezzo: 1000&euro;</span>
-            </p>
-            <span class="badge badge-dark">Best Offer</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="recensioni-section" class="recensioni-section">
-  <div class="container">
-    <h2>Recensioni</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <div class="media">
-          <img src="user1.jpg" class="mr-3 rounded-circle" alt="Utente 1" width="64" height="64" style="border: 2px solid #00bfff;">
-          <div class="media-body">
-            <h5 class="mt-0">Utente 1</h5>
-            <p>Recensione dell'utente 1</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="media">
-          <img src="user2.jpg" class="mr-3 rounded-circle" alt="Utente 2" width="64" height="64" style="border: 2px solid #00bfff;">
-          <div class="media-body">
-          <h5 class="mt-0">Utente 2</h5>
-          <p>Recensione dell'utente 2</p>
-          </div>
-          </div>
-          </div>
-          <div class="col-md-6 mb-4">
-          <div class="media">
-          <img src="user3.jpg" class="mr-3 rounded-circle" alt="Utente 3" width="64" height="64" style="border: 2px solid #00bfff;">
-          <div class="media-body">
-          <h5 class="mt-0">Utente 3</h5>
-          <p>Recensione dell'utente 3</p>
-          </div>
-          </div>
-          </div>
-          <div class="col-md-6 mb-4">
-          <div class="media">
-          <img src="user4.jpg" class="mr-3 rounded-circle" alt="Utente 4" width="64" height="64" style="border: 2px solid #00bfff;">
-          <div class="media-body">
-          <h5 class="mt-0">Utente 4</h5>
-          <p>Recensione dell'utente 4</p>
-          </div>
-          </div>
-          </div>
-          </div>
-          <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#recensioni-section" aria-expanded="false" aria-controls="recensioni-section">
-          Collassa/Riapri
-          </button>
-          </div>
-          
-            </section>
-            <section id="last-minute-section" class="last-minute-section">
-              <div class="container">
-                <h2>Last Minute</h2>
-                <div class="row">
-                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="last-minute-card rounded shadow-sm"></div>
-                  </div>
-                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="last-minute-card rounded shadow-sm"></div>
-                  </div>
-                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="last-minute-card rounded shadow-sm"></div>
-                  </div>
-                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="last-minute-card rounded shadow-sm"></div>
-                  </div>
-                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="last-minute-card rounded shadow-sm"></div>
-                  </div>
-                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="last-minute-card rounded shadow-sm"></div>
-                  </div>
-                </div>
-                <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#last-minute-section" aria-expanded="false" aria-controls="last-minute-section">
-                  Collassa/Riapri
-                </button>
-              </div>
-            </section>
-            <footer class="footer-section">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-4">
-                    <h4>Agenzia di viaggi</h4>
-                    <p>Indirizzo: Via Roma 123</p>
-                    <p>Telefono: 0123456789</p>
-                    <p>Email: info@agenziadiviaggi.com</p>
-                    </div>
-                    <div class="col-md-8">
-                    <button class="btn btn-primary float-right" data-toggle="modal" data-target="#contattaci-modal">Contattaci</button>
-                    </div>
-                    </div>
-                    </div>
-                    
-                      </footer>
-                      <div class="modal fade" id="contattaci-modal" tabindex="-1" role="dialog" aria-labelledby="contattaci-modal-title" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="contattaci-modal-title">Contattaci</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="form-group">
-                                  <label for="email">Email address</label>
-                                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                                </div>
-                                <div class="form-group">
-                                  <label for="message">Message</label>
-                                  <textarea class="form-control" id="message" rows="5"></textarea>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                              <button type="button" class="btn btn-primary">Invia</button>
-                            </div>
-                          </div>
+            </div>
+            </div>
+            
+              </section>
+              <section id="welcome-summer-section" class="welcome-summer-section">
+                <div class="container">
+                  <h2>Welcome Summer</h2>
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                      <div class="card h-100 shadow">
+                        <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
+                        <div class="card-body">
+                          <h5 class="card-title">Destinazione 1</h5>
+                          <button class="btn btn-primary">Prenota ora</button>
                         </div>
                       </div>
-                      <!-- Optional JavaScript -->
-                      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-                      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-                      <script>
-                        // Numero di destinazioni
-                        var numDestinations = $('.destination-card').length;
-                        alert("Numero di viaggi presenti sulla pagina: " + numDestinations);
-                      </script>
-                    </body>
-                    </html>
-    
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                      <div class="card h-100 shadow">
+                        <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
+                        <div class="card-body">
+                          <h5 class="card-title">Destinazione 2</h5>
+                          <button class="btn btn-primary">Prenota ora</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                      <div class="card h-100 shadow">
+                        <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
+                        <div class="card-body">
+                          <h5 class="card-title">Destinazione 3</h5>
+                          <button class="btn btn-primary">Prenota ora</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                      <div class="card h-100 shadow">
+                        <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
+                        <div class="card-body">
+                          <h5 class="card-title">Destinazione 4</h5>
+                          <button class="btn btn-primary">Prenota ora</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2col-md-4 col-sm-6 col-6 mb-4">
+                      <div class="card h-100 shadow">
+                      <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
+                      <div class="card-body">
+                      <h5 class="card-title">Destinazione 5</h5>
+                      <button class="btn btn-primary">Prenota ora</button>
+                      </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                      <div class="card h-100 shadow">
+                      <img src="https://media.istockphoto.com/id/1160947136/it/foto/coppia-rilassarsi-sulla-spiaggia-godere-di-un-bellissimo-mare-sullisola-tropicale.jpg?s=612x612&w=0&k=20&c=HHAHwGqFiIeo_88sd1IVcRNGFlSiLXTBZ4zGm6e08jE=" class="card-img-top" alt="Luogo di destinazione">
+                      <div class="card-body">
+                      <h5 class="card-title">Destinazione 6</h5>
+                      <button class="btn btn-primary">Prenota ora</button>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      
+                        </section>
+                        <section id="last-minute-section" class="last-minute-section">
+                          <div class="container">
+                            <h2>Last Minute</h2>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="last-minute-card"></div>
+                              </div>
+                              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="last-minute-card"></div>
+                              </div>
+                              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="last-minute-card"></div>
+                              </div>
+                              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="last-minute-card"></div>
+                              </div>
+                              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="last-minute-card"></div>
+                              </div>
+                              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="last-minute-card"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section id="recensioni-section" class="recensioni-section">
+                          <div class="container">
+                            
+                                  <h2>Recensioni</h2>
+                                  <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                      <div class="review-card">
+                                        <img src="https://media.istockphoto.com/id/488027923/it/foto/non-preoccuparti-non-%C3%A8-contagiosa.jpg?s=612x612&w=is&k=20&c=Nc0fL5OTOjd3JObqCkIE1VltEM23qGhtNmDF1PLdv7E=" class="rounded-circle border border-primary img-fluid" alt="Foto utente">
+                                        <div class="review-text">
+                                          <h5 class="review-username">Utente 1</h5>
+                                          <p class="review-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis neque sit amet lectus gravida, ac euismod velit finibus. Integer maximus odio id tincidunt vehicula.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                      <div class="review-card">
+                                        <img src="https://media.istockphoto.com/id/475060896/it/foto/pippo-giovane-uomo.jpg?s=612x612&w=is&k=20&c=zaHGmv2pTTIGbrFeql_YfM4c_SF-JPUlBEpPZgqa8z0=" class="rounded-circle border border-primary img-fluid" alt="Foto utente">
+                                        <div class="review-text">
+                                          <h5 class="review-username">Utente 2</h5>
+                                          <p class="review-content">Sed lobortis neque sit amet lectus gravida, ac euismod velit finibus. Integer maximus odio id tincidunt vehicula. Donec ornare in nunc at consequat. Fusce quis aliquet nisl.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                      <div class="review-card">
+                                        <img src="https://media.istockphoto.com/id/1213860680/it/foto/bella-donna-dai-capelli-grigi-senior-che-indossa-camicia-casual-e-occhiali-su-sfondo-giallo.jpg?s=612x612&w=is&k=20&c=PQrVjwfSgBgm9OMmhWI_MwCb-lfA8xqQWs3BgOsER7o=" class="rounded-circle border border-primary img-fluid" alt="Foto utente">
+                                        <div class="review-text">
+                                          <h5 class="review-username">Utente 3</h5>
+                                          <p class="review-content">Donec ornare in nunc at consequat. Fusce quis aliquet nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis neque sit amet lectus gravida, ac euismod velit finibus.</p>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  
+                                    </section>
+                                    <footer class="footer bg-dark">
+                                      <div class="container">
+                                        <div class="row">
+                                          <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <h5 class="text-white">Informazioni</h5>
+                                            <p class="text-white">Indirizzo: Via Roma 123, 00100 Roma</p>
+                                            <p class="text-white">Telefono: +39 06 1234567</p>
+                                            <p class="text-white">Email: info@viaggiaconnoi.it</p>
+                                          </div>
+                                          <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <h5 class="text-white">Link utili</h5>
+                                            <ul class="list-unstyled">
+                                              <li><a href="#" class="text-white">Termini e condizioni</a></li>
+                                              <li><a href="#" class="text-white">Privacy policy</a></li>
+                                              <li><a href="#" class="text-white">Cookie policy</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="col-lg-4 col-md-12 col-sm-12">
+                                            <button class="btn btn-primary" data-toggle="modal" data-target="#contact-modal">Contattaci</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </footer>
+                                    
+                                    
+                                    
+                                    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="contact-modal-label">Contattaci</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                            <form>
+                                              <div class="form-group">
+                                                <label for="email-input">Email</label>
+                                                <input type="email" class="form-control" id="email-input" placeholder="Inserisci la tua email">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="message-text">Messaggio</label>
+                                                <textarea class="form-control" id="message-text" rows="5" placeholder="Inserisci iltuo messaggio"></textarea>
+                                              </div>
+                                              </form>
+                                              </div>
+                                              <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                                              <button type="button" class="btn btn-primary">Invia</button>
+                                              </div>
+                                              </div>
+                                              </div>
+                                              
+                                                </div>
+                                                <!-- JS, Popper.js, and jQuery -->
+                                                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                                                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/esm/popper">
+                                                </script>
+                                                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                                                <script>
+                                                  // Aggiungi badge "HOT" su tutte le offerte "Welcome Summer"
+                                                  const addHotBadge = () => {
+                                                    const welcomeSummerCards = document.querySelectorAll('#welcome-summer-section .card');
+                                                    welcomeSummerCards.forEach(card => {
+                                                      const badge = document.createElement('div');
+                                                      badge.classList.add('hot-badge');
+                                                      badge.textContent = 'HOT';
+                                                      card.appendChild(badge);
+                                                    });
+                                                  };
+                                                  addHotBadge();
+                                              
+                                                  // Rimuovi tutte le card dalla pagina
+                                                  const removeAllCards = () => {
+                                                    const cardSections = document.querySelectorAll('.card-section');
+                                                    cardSections.forEach(section => {
+                                                      section.innerHTML = '';
+                                                    });
+                                                  };
+                                              
+                                                  // Conta il numero di viaggi presenti sulla pagina e visualizza il risultato in un alert
+                                                  const countTrips = () => {
+                                                    const tripCards = document.querySelectorAll('.card');
+                                                    const numTrips = tripCards.length;
+                                                    alert(`Ci sono ${numTrips} viaggi disponibili`);
+                                                  };
+                                              
+                                                  // Aggiungi funzionalità ai bottoni per collassare e riaprire le sezioni
+                                                  const collapseButtons = document.querySelectorAll('.collapse-button');
+                                                  collapseButtons.forEach(button => {
+                                                    button.addEventListener('click', () => {
+                                                      const targetSection = button.dataset.target;
+                                                      const section = document.querySelector(targetSection);
+                                                      section.classList.toggle('show');
+                                                    });
+                                                  });
+                                              
+                                                  // Mostra il modale "Contattaci" quando viene cliccato il bottone corrispondente
+                                                  const contactButton = document.querySelector('.footer button');
+                                                  const contactModal = document.querySelector('#contact-modal');
+                                                  contactButton.addEventListener('click', () => {
+                                                    contactModal.classList.add('show');
+                                                  });
+                                                </script>
+                                              </body>
+                                              </html>
