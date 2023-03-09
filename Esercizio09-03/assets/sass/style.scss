@@ -1,0 +1,97 @@
+
+@import "partials/colors";
+@import "partials/fonts";
+@import "partials/spacings";
+@import "partials/buttons";
+@import "partials/mixins";
+@import "partials/animations";
+$hero-image-width: 50%;
+$grid-item-width: 25%;
+
+/* header/hero section */
+header {
+  background-color: $bg-hero;
+  color: $color-text;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 500px;
+  padding: 0 50px;
+  .logo {
+    font-size: $font-size-base * 2;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-text;
+    &:hover {
+      color: white;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin-left: 20px;
+        a {
+          text-decoration: none;
+          color: $color-text;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .hero-image {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .button-group {
+    display: flex;
+    a {
+      margin-right: 20px;
+    }
+  }
+}
+
+/* grid section */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  .grid-item {
+    width: calc(100% / 4);
+  }
+}
+.hero-image {
+    width: $hero-image-width;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    .grid-item {
+      width: $grid-item-width;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  

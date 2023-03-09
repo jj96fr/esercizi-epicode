@@ -1,0 +1,9 @@
+/* spacing classes */
+@for $i from 0 to 7 {
+  $spacing: ($i * 8px);
+  .padding-block-#{ $i } { padding-block: $spacing; }
+  .padding-inline-#{ $i } { padding-inline: $spacing; }
+  .margin-block-#{ $i } { margin-block: $spacing; }
+  .margin-inline-#{ $i } { margin-inline: $spacing; }
+}
+  

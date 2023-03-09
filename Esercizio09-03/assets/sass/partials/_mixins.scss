@@ -1,0 +1,18 @@
+/* animations mixins */
+@mixin hero-entry($name, $duration: 0.5s, $delay: 0s) {
+    @keyframes #{$name}-entry {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    animation-name: #{$name}-entry;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+  }
+  

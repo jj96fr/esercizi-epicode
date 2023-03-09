@@ -1,0 +1,16 @@
+/* button classes */
+$button-colors: $color-btn-1, $color-btn-2, $color-btn-3;
+@for $i from 1 through length($button-colors) {
+  $btn-color: nth($button-colors, $i);
+  .btn-#{ $i } {
+    background-color: $btn-color;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
