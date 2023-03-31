@@ -40,7 +40,7 @@ class Movies extends Component {
       <>
         <h2 className="text-light mt-4">{this.props.search}</h2>
         {this.state.isError && (
-          <Alert variant="danger">Qualcosa è andato storto :(</Alert>
+          <Alert variant="danger">ERRORE!!</Alert>
         )}
         {this.state.isLoading && (
           <div className="text-center">
